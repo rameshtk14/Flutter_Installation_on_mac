@@ -1,0 +1,66 @@
+Flutter on Mac 
+
+For Apple Silicon Mac install Rosetta
+
+sudo softwareupdate --install-rosetta --agree-to-license
+
+Create  a directory "development" and unzip the .zip file to the development directory
+
+cd ~/development
+unzip ~/Downloads/flutter_macos_3.13.9-stable.zip
+
+Or you can directly clone the stable version with out downloading the .zip
+
+git clone https://github.com/flutter/flutter.git -b stable
+
+Switch to your home directory
+Create .zshrc if your terminal shows .zshrc on the title
+
+export PATH="$PATH:[PATH_OF_FLUTTER_GIT_DIRECTORY]/bin"
+
+PATH_OF_FLUTTER_GIT_DIRECTORY is the directory where you unzipped the stable version or cloned the stable version
+
+If your installed path is /Users/ramesh/Flutter/flutter/bin 
+
+open .zshrc file you created and paste the path
+
+export PATH="$PATH:/Users/ramesh/Flutter/flutter/bin”
+
+
+Execute flutter command once you restart the terminal
+
+It installs flutter 
+
+flutter doctor
+
+Xcode
+
+install Xcode and then run the foillowing commands
+
+sudo Xcode-select -—switch /Applications/Xcode.app/Contents/Developer 
+
+sudo xcodebuild -runfirstLaunch
+
+Android Studio 
+
+Install Android Studio
+
+Install Plugins Dart and flutter
+
+Run flutter doctor —android-licences
+
+Flutter Config
+
+flutter config
+
+flutter config --enable-macos-desktop
+
+Running Flutter Project
+
+flutter create helloworld
+
+cd helloworld
+
+flutter run
+
+
